@@ -32,4 +32,29 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('angular---all-in-one app is running!');
   });
+
+  it('should have a defined title property', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toBeDefined();
+  });
+
+  it('should have a title property of type string', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(typeof app.title).toBe('string');
+  });
+
+  it('should have a title property with a default value', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toBe('angular---all-in-one');
+  });
+
+  it('should render the title in the template', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('angular---all-in-one');
+  });
 });

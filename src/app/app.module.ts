@@ -66,6 +66,10 @@ import { UserHomeComponent } from './route-guards/can-match/user-home/user-home.
 import { AdminDashboardComponent } from './route-guards/can-match/admin-dashboard/admin-dashboard.component';
 import { SellerDashboardComponent } from './route-guards/can-match/seller-dashboard/seller-dashboard.component';
 
+/**
+ * The AppModule is the root module of the application.
+ * It bootstraps the AppComponent and imports other necessary modules.
+ */
 @NgModule({
   declarations: [
     AppComponent,
